@@ -14,7 +14,14 @@ namespace DAO
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             List<String[]> result = new List<String[]>();
-            String sql = "SELECT * FROM " + table;
+            String sql = "";
+            if (table == "HoaDon")
+                sql = @"SELECT HoaDon.id,ngay,tongtien,diachigiao,giaohang,idkhachhang,ten,diachi,sdt from HoaDon, KhachHang where HoaDon.idkhachhang=KhachHang.id
+";
+            else if (table == "CTHoaDon")
+                sql = @"select CTHoaDon.id,CTHoaDon.soluong,ThietBi.id,ThietBi.ten,ThietBi.gia,ThietBi.soluong,ThietBi.loai from CTHoaDon, ThietBi where CTHoaDon.idthietbi = ThietBi.id";
+            else
+                sql = "SELECT * FROM " + table;
             try
             {
                 SqlCommand cmd = conn.CreateCommand();

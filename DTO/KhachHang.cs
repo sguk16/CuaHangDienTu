@@ -13,6 +13,10 @@ namespace DTO
         {
             return $"dbo.AUTO_IDKH(),N'{tenkh}',N'{diachi}','{sdt}'";
         }
+        public override string ToString()
+        {
+            return tenkh;
+        }
         public string Makh { get => makh; set => makh = value; }
         public string Tenkh { get => tenkh; set => tenkh = value; }
         public string Diachi { get => diachi; set => diachi = value; }

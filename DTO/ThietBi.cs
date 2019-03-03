@@ -15,6 +15,10 @@ namespace DTO
         {
             return $"dbo.AUTO_IDTB(),N'{tentb}',N{dongia},{sl},'{loaitb}'";
         }
+        public override string ToString()
+        {
+            return tentb;
+        }
         public ThietBi(string matb, string tentb, string loaitb, int sl, int dongia)
         {
             this.matb = matb;
