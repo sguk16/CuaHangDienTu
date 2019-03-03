@@ -13,7 +13,7 @@ namespace DAO
         {
             List<HoaDon> result = new List<HoaDon>();
             List<String[]> data = ExecuteQuery.getAll("HoaDon");
-            for(int i=0;i<data.Count();i++)
+            for (int i = 0; i < data.Count(); i++)
                 result.Add(new HoaDon(data[i]));
             return result;
         }
@@ -21,12 +21,13 @@ namespace DAO
         {
             return new HoaDon(ExecuteQuery.getOne(id, "HoaDon"));
         }
-        public static int AddHoaDon(HoaDon hd,List<ChiTietHoaDon> cthd)
+        public static int AddHoaDon(HoaDon hd, List<ChiTietHoaDon> cthd)
         {
+            int i = 0;
             if (ExecuteQuery.AddRows(hd.ToSQLString(), "HoaDon") > 0)
                 foreach (ChiTietHoaDon x in cthd)
-                    CTHDDAO.AddCTHD(x);
-
+                    i += CTHDDAO.AddCTHD(x);
+            return i;
 
         }
         public static int EditHoaDon(HoaDon hd)
@@ -36,7 +37,7 @@ namespace DAO
             conn.Open();
             String format = "yyyy-MM-dd HH:mm:ss";
             String sql = "UPDATE HoaDon \n" +
-                "SET idkhachhang='" + hd.Makh + "',ngay=" + hd.Ngaylap.ToString(format) + ",tongtien=" + hd.Thanhtien + ",diachigiao='" + hd.Diachigiao + "',giaohang="+hd.Giaohang +"\n" +
+                "SET idkhachhang='" + hd.Makh + "',ngay=" + hd.Ngaylap.ToString(format) + ",tongtien=" + hd.Thanhtien + ",diachigiao='" + hd.Diachigiao + "',giaohang=" + hd.Giaohang + "\n" +
                 "WHERE id='" + hd.Mahd + "'";
             Console.WriteLine(sql);
             try

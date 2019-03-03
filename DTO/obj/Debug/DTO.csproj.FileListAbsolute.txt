@@ -9,3 +9,9 @@ C:\Users\nhan9\source\repos\CuaHangDienTu\DTO\obj\Debug\DTO.csprojAssemblyRefere
 C:\Users\nhan9\source\repos\CuaHangDienTu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\nhan9\source\repos\CuaHangDienTu\DTO\obj\Debug\DTO.dll
 C:\Users\nhan9\source\repos\CuaHangDienTu\DTO\obj\Debug\DTO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\DTO\bin\Debug\DTO.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\DTO\bin\Debug\DTO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\DTO\obj\Debug\DTO.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\DTO\obj\Debug\DTO.pdb

@@ -38,3 +38,43 @@ C:\Users\nhan9\source\repos\CuaHangDienTu\GUI\obj\Debug\GUI.csproj.CoreCompileIn
 C:\Users\nhan9\source\repos\CuaHangDienTu\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\nhan9\source\repos\CuaHangDienTu\GUI\obj\Debug\GUI.exe
 C:\Users\nhan9\source\repos\CuaHangDienTu\GUI\obj\Debug\GUI.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\GUI.exe.config
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\GUI.exe
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\GUI.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\BUS.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\DTO.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\DAO.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\BUS.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\DTO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\bin\Debug\DAO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.FHoaDon.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.FKhachHang.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.FMain.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.FSanPham.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.exe
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi\GUI\obj\Debug\GUI.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.FHoaDon.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.FKhachHang.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.FMain.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.FSanPham.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.exe
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\GUI.exe.config
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\GUI.exe
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\GUI.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\BUS.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\DTO.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\DAO.dll
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\BUS.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\DTO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\bin\Debug\DAO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\GUI\obj\Debug\GUI.csproj.CopyComplete

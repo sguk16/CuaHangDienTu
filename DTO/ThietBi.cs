@@ -13,7 +13,7 @@ namespace DTO
         private int sl, dongia;
         public string ToSQLString()
         {
-            return $"dbo.AUTO_IDTB(),N'{tentb}',N{dongia},{sl},'{loaitb}'";
+            return $"dbo.AUTO_IDTB(),N'{tentb}',{dongia},{sl},N'{loaitb}'";
         }
         public override string ToString()
         {
@@ -31,15 +31,15 @@ namespace DTO
         {
             this.matb = data[0];
             this.tentb = data[1];
-            this.loaitb = data[2];
-            this.sl = int.Parse(data[3]);
-            this.dongia = int.Parse(data[4]);
+            this.loaitb = data[4];
+            this.sl = Int32.Parse(data[3]);
+            this.dongia = Int32.Parse(data[2]);
         }
 
-        public int SL { get => sl; set => sl = value; }
-        public int Dongia { get => dongia; set => dongia = value; }
         public string Matb { get => matb; set => matb = value; }
         public string Tentb { get => tentb; set => tentb = value; }
+        public int SL { get => sl; set => sl = value; }
+        public int Dongia { get => dongia; set => dongia = value; }
         public string Loaitb { get => loaitb; set => loaitb = value; }
     }
 }

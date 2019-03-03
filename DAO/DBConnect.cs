@@ -14,8 +14,7 @@ namespace DAO
             //
             // Data Source=TRAN-VMWARE\SQLEXPRESS;Initial Catalog=simplehr;Persist Security Info=True;User ID=sa;Password=12345
             //
-            string connString = @"Data Source=" + datasource + ";Initial Catalog="
-                        + database + ";Persist Security Info=True;User ID=" + username + ";Password=" + password;
+            string connString = @"Data Source=DESKTOP-3DQNB33\TVHUY;Initial Catalog=ThietBi;Integrated Security=True";
 
             SqlConnection conn = new SqlConnection(connString);
 

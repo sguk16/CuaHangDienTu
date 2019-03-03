@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace GUI
 {
@@ -37,7 +39,20 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
+            // Kiểm tra thông tin rỗng
+            if (!CheckEmpty()) { MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo"); return; }
+            // Thực hiện thêm thiết bị
+            ThietBi tbMoi = new ThietBi(String.Empty, txbTen.Text, txbLoai.Text, Int32.Parse(txbSoLuong.Text), Int32.Parse(txbGia.Text));
+            if (ThietBiBUS.AddThietBi(tbMoi) > 0) this.Close();
+            else MessageBox.Show("Lưu không thành công.", "Thông báo");
+        }
+        private bool CheckEmpty()
+        {
+            if (txbTen.Text == String.Empty) return false;
+            if (txbGia.Text == String.Empty) return false;
+            if (txbSoLuong.Text == String.Empty) return false;
+            if (txbLoai.Text == String.Empty) return false;
+            return true;
         }
     }
 }
