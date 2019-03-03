@@ -21,9 +21,13 @@ namespace DAO
         {
             return new HoaDon(ExecuteQuery.getOne(id, "HoaDon"));
         }
-        public static int AddHoaDon(HoaDon hd)
+        public static int AddHoaDon(HoaDon hd,List<ChiTietHoaDon> cthd)
         {
-            return ExecuteQuery.AddRows(hd.ToSQLString(), "HoaDon");
+            if (ExecuteQuery.AddRows(hd.ToSQLString(), "HoaDon") > 0)
+                foreach (ChiTietHoaDon x in cthd)
+                    CTHDDAO.AddCTHD(x);
+
+
         }
         public static int EditHoaDon(HoaDon hd)
         {

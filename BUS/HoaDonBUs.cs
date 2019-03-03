@@ -17,9 +17,9 @@ namespace BUS
         {
             return HoaDonDAO.GetHoaDon(id);
         }
-        public static int AddHoaDon(HoaDon hd)
+        public static int AddHoaDon(HoaDon hd,List<ChiTietHoaDon> cthd)
         {
-            return HoaDonDAO.AddHoaDon(hd);
+            return HoaDonDAO.AddHoaDon(hd,cthd);
         }
         public static int EditHoaDon(HoaDon hd)
         {
