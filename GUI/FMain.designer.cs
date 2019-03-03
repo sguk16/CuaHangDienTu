@@ -36,6 +36,14 @@
             this.btnSanPham = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblKH = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblTien = new System.Windows.Forms.Label();
+            this.lblStt = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblNgay = new System.Windows.Forms.Label();
             this.lblMaHD = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,14 +51,6 @@
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblDiaChi = new System.Windows.Forms.Label();
-            this.lblStt = new System.Windows.Forms.Label();
-            this.lblTien = new System.Windows.Forms.Label();
-            this.lblKH = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.tctMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -112,6 +112,8 @@
             this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhachHang.Size = new System.Drawing.Size(786, 365);
             this.dgvKhachHang.TabIndex = 0;
+            this.dgvKhachHang.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvKhachHang_CellBeginEdit);
+            this.dgvKhachHang.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellEndEdit);
             // 
             // tabPage2
             // 
@@ -174,6 +176,86 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hóa đơn";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblKH
+            // 
+            this.lblKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblKH.AutoSize = true;
+            this.lblKH.Location = new System.Drawing.Point(521, 29);
+            this.lblKH.Name = "lblKH";
+            this.lblKH.Size = new System.Drawing.Size(60, 24);
+            this.lblKH.TabIndex = 16;
+            this.lblKH.Text = "label4";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(398, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(117, 24);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Khách hàng:";
+            // 
+            // lblTien
+            // 
+            this.lblTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTien.AutoSize = true;
+            this.lblTien.Location = new System.Drawing.Point(764, 379);
+            this.lblTien.Name = "lblTien";
+            this.lblTien.Size = new System.Drawing.Size(20, 24);
+            this.lblTien.TabIndex = 14;
+            this.lblTien.Text = "0";
+            // 
+            // lblStt
+            // 
+            this.lblStt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStt.AutoSize = true;
+            this.lblStt.Location = new System.Drawing.Point(521, 105);
+            this.lblStt.Name = "lblStt";
+            this.lblStt.Size = new System.Drawing.Size(60, 24);
+            this.lblStt.TabIndex = 13;
+            this.lblStt.Text = "label7";
+            // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.Location = new System.Drawing.Point(521, 81);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(60, 24);
+            this.lblDiaChi.TabIndex = 12;
+            this.lblDiaChi.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(398, 379);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 24);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Thành tiền:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(398, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 24);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Trạng thái";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(398, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 24);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Địa chỉ giao:";
             // 
             // lblNgay
             // 
@@ -255,86 +337,6 @@
             this.dgvHoaDon.Size = new System.Drawing.Size(389, 365);
             this.dgvHoaDon.TabIndex = 2;
             this.dgvHoaDon.SelectionChanged += new System.EventHandler(this.dgvHoaDon_SelectionChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(398, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Địa chỉ giao:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(398, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 24);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Trạng thái";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(398, 379);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 24);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Thành tiền:";
-            // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Location = new System.Drawing.Point(521, 81);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(60, 24);
-            this.lblDiaChi.TabIndex = 12;
-            this.lblDiaChi.Text = "label6";
-            // 
-            // lblStt
-            // 
-            this.lblStt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblStt.AutoSize = true;
-            this.lblStt.Location = new System.Drawing.Point(521, 105);
-            this.lblStt.Name = "lblStt";
-            this.lblStt.Size = new System.Drawing.Size(60, 24);
-            this.lblStt.TabIndex = 13;
-            this.lblStt.Text = "label7";
-            // 
-            // lblTien
-            // 
-            this.lblTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTien.AutoSize = true;
-            this.lblTien.Location = new System.Drawing.Point(764, 379);
-            this.lblTien.Name = "lblTien";
-            this.lblTien.Size = new System.Drawing.Size(20, 24);
-            this.lblTien.TabIndex = 14;
-            this.lblTien.Text = "0";
-            // 
-            // lblKH
-            // 
-            this.lblKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblKH.AutoSize = true;
-            this.lblKH.Location = new System.Drawing.Point(521, 29);
-            this.lblKH.Name = "lblKH";
-            this.lblKH.Size = new System.Drawing.Size(60, 24);
-            this.lblKH.TabIndex = 16;
-            this.lblKH.Text = "label4";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(398, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 24);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Khách hàng:";
             // 
             // FMain
             // 

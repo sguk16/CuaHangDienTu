@@ -11,6 +11,7 @@
         private const int tabKH = 0;
         private const int tabTB = 1;
         private const int tabHD = 2;
+        private DataGridViewCell beedit;
         public FMain()
         {
             InitializeComponent();
@@ -125,6 +126,30 @@
                 dgvCTHD.Columns[1].HeaderText = "Thiết bị";
                 dgvCTHD.Columns[2].HeaderText = "Số lượng";
             }
+        }
+
+        private void dgvKhachHang_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult re = MessageBox.Show("Bạn có muốn lưu không?", "Thông báo", MessageBoxButtons.YesNo);
+            if(re == DialogResult.Yes)
+            {
+                KhachHang kh = (dgvKhachHang.DataSource as List<KhachHang>)[e.RowIndex];
+                if (KhachHangBUS.EditKhachHang(kh) == 0)
+                {
+                    MessageBox.Show("Kiểm tra lại kết nối của bạn.", "Thông báo");
+                    LoadKhachHang();
+                }
+            }
+            else
+            {
+                dgvKhachHang[e.ColumnIndex, e.RowIndex] = beedit;
+            }
+
+        }
+
+        private void dgvKhachHang_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            beedit = dgvKhachHang[e.ColumnIndex, e.RowIndex];
         }
     }
 }
