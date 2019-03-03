@@ -23,7 +23,7 @@ namespace DAO
         }
         public static int AddKhachHang(KhachHang kh)
         {
-            return ExecuteQuery.AddRows(kh.ToString(), "KhachHang");
+            return ExecuteQuery.AddRows(kh.ToSQLString(), "KhachHang");
         }
         public static int EditKhachHang(KhachHang kh)
         {

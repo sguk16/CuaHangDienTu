@@ -23,7 +23,7 @@ namespace DAO
         }
         public static int AddHoaDon(HoaDon hd)
         {
-            return ExecuteQuery.AddRows(hd.ToString(), "HoaDon");
+            return ExecuteQuery.AddRows(hd.ToSQLString(), "HoaDon");
         }
         public static int EditHoaDon(HoaDon hd)
         {

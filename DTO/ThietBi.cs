@@ -11,9 +11,9 @@ namespace DTO
     {
         private String matb, tentb,loaitb;
         private int sl, dongia;
-        public override string ToString()
+        public string ToSQLString()
         {
-            return "\'"+matb+ "\',\'"+ tentb + "\'," + dongia + "," + sl + ",'"+ loaitb + "\'";
+            return $"dbo.AUTO_IDTB(),N'{tentb}',N{dongia},{sl},'{loaitb}'";
         }
         public ThietBi(string matb, string tentb, string loaitb, int sl, int dongia)
         {

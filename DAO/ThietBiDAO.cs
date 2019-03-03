@@ -40,7 +40,7 @@ namespace DAO
         //Thêm thiết bị
         public static int AddThietBi(ThietBi tb)
         {
-            return ExecuteQuery.AddRows(tb.ToString(), "ThietBi");
+            return ExecuteQuery.AddRows(tb.ToSQLString(), "ThietBi");
         }
         //Sửa thiết bị
         public static int EditThietBi(ThietBi tb)

@@ -11,11 +11,11 @@ namespace DTO
         private String mahd,makh,diachigiao;
         DateTime ngaylap;
         private int thanhtien,giaohang;
-        public override string ToString()
+        public string ToSQLString()
         {
             DateTime time = DateTime.Now;
             String format = "yyyy-MM-dd HH:mm:ss";
-            return $"'{mahd}','{makh}','{ngaylap.ToString(format)}',{thanhtien},{diachigiao},'{giaohang}'";
+            return $"dbo.AUTO_IDHD(),'{makh}','{ngaylap.ToString(format)}',{thanhtien},{diachigiao},'{giaohang}'";
         }
         public string Mahd { get => mahd; set => mahd = value; }
         public DateTime Ngaylap { get => ngaylap; set => ngaylap = value; }
