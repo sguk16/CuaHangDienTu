@@ -85,6 +85,9 @@
     <Compile Include="FSanPham.designer.cs">
       <DependentUpon>FSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCTHD.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FHoaDon.resx">

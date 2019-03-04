@@ -100,6 +100,7 @@
             // 
             // dgvKhachHang
             // 
+            this.dgvKhachHang.AllowUserToResizeRows = false;
             this.dgvKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -140,6 +141,7 @@
             // 
             // dgvSanPham
             // 
+            this.dgvSanPham.AllowUserToResizeRows = false;
             this.dgvSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -152,6 +154,9 @@
             this.dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSanPham.Size = new System.Drawing.Size(786, 365);
             this.dgvSanPham.TabIndex = 2;
+            this.dgvSanPham.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvSanPham_CellBeginEdit);
+            this.dgvSanPham.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellEndEdit);
+            this.dgvSanPham.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvSanPham_DataError);
             // 
             // tabPage3
             // 
@@ -261,7 +266,7 @@
             // 
             this.lblNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNgay.AutoSize = true;
-            this.lblNgay.Location = new System.Drawing.Point(521, 57);
+            this.lblNgay.Location = new System.Drawing.Point(521, 55);
             this.lblNgay.Name = "lblNgay";
             this.lblNgay.Size = new System.Drawing.Size(60, 24);
             this.lblNgay.TabIndex = 8;
@@ -281,7 +286,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 57);
+            this.label2.Location = new System.Drawing.Point(398, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 6;
@@ -299,6 +304,7 @@
             // 
             // dgvCTHD
             // 
+            this.dgvCTHD.AllowUserToResizeRows = false;
             this.dgvCTHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCTHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -306,6 +312,7 @@
             this.dgvCTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCTHD.Location = new System.Drawing.Point(398, 144);
             this.dgvCTHD.Name = "dgvCTHD";
+            this.dgvCTHD.ReadOnly = true;
             this.dgvCTHD.RowHeadersVisible = false;
             this.dgvCTHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCTHD.Size = new System.Drawing.Size(391, 226);
@@ -324,6 +331,7 @@
             // 
             // dgvHoaDon
             // 
+            this.dgvHoaDon.AllowUserToResizeRows = false;
             this.dgvHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -332,6 +340,7 @@
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Location = new System.Drawing.Point(3, 5);
             this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHoaDon.Size = new System.Drawing.Size(389, 365);
