@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DTO;
-using DAO;
-namespace BUS
+﻿namespace BUS
 {
+    using System;
+    using System.Collections.Generic;
+    using DTO;
+    using DAO;
+
     public class CTHDBUS
     {
         public static List<ChiTietHoaDon> ListCTHD()

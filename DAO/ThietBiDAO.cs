@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using DTO;
-using System.Data;
-
-namespace DAO
+﻿namespace DAO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Data.SqlClient;
+    using DTO;
+
     public class ThietBiDAO
     {
         public static List<ThietBi> GetAllThietBi()

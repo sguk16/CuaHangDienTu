@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using DTO;
-namespace DAO
+﻿namespace DAO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data.SqlClient;
+
     public class ExecuteQuery
     {
         public static List<String[]> getAll(String table)

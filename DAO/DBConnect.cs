@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-
-namespace DAO
+﻿namespace DAO
 {
+    using System.Data.SqlClient;
+
     class DBConnect
     {
         public static SqlConnection GetDBConnection(string datasource, string database, string username, string password)
