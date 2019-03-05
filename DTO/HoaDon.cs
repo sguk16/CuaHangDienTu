@@ -17,8 +17,8 @@
         public string Mahd { get => mahd; set => mahd = value; }
         public KhachHang Makh { get => makh; set => makh = value; }
         public DateTime Ngaylap { get => ngaylap; set => ngaylap = value; }
-        public string Diachigiao { get => diachigiao; set => diachigiao = value; }
         public int Thanhtien { get => thanhtien; set => thanhtien = value; }
+        public string Diachigiao { get => diachigiao; set => diachigiao = value; }
         public int Giaohang { get => giaohang; set => giaohang = value; }
         public String TrangThai
         {

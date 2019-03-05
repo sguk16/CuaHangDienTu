@@ -26,9 +26,9 @@
         {
             this.matb = data[0];
             this.tentb = data[1];
-            this.loaitb = data[4];
-            this.sl = Int32.Parse(data[3]);
             this.dongia = Int32.Parse(data[2]);
+            this.sl = Int32.Parse(data[3]);
+            this.loaitb = data[4];
         }
 
         public string Matb { get => matb; set => matb = value; }

@@ -13,7 +13,8 @@
         {
             InitializeComponent();
             pnlCTHD = new List<PCTHD>();
-            LoadThietBi();
+            //LoadThietBi();
+            LoadLoai();
             LoadKhachHang();
             lblNgay.Text = DateTime.Now.ToShortDateString();
         }
@@ -43,15 +44,11 @@
                 cbbKH.DisplayMember = "Tenkh";
             }
         }
-        private void txbTim_KeyPress(object sender, KeyPressEventArgs e)
+        private void LoadLoai()
         {
-            if (Char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)8 || Char.IsWhiteSpace(e.KeyChar))
-                e.Handled = false;
-            else e.Handled = true;
-            if (e.KeyChar == (char)13)
-                btnTim.PerformClick();
+            String[] list = ThietBiBUS.Loaitb();
+            cbbLoai.DataSource = list;
         }
-
         private void btnThemKH_Click(object sender, EventArgs e)
         {
             FKhachHang fKhachHang = new FKhachHang();
@@ -132,12 +129,6 @@
             return true;
         }
 
-        private void btnTim_Click(object sender, EventArgs e)
-        {
-            string ten = txbTim.Text;
-            //
-        }
-
         private void cbbKH_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cbbKH.SelectedValue != null)
@@ -153,6 +144,19 @@
             FKhachHang khachHang = new FKhachHang();
             khachHang.ShowDialog();
             LoadKhachHang();
+        }
+
+        private void cbbLoai_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbbLoai.SelectedValue != null)
+            {
+                dgvSanPham.DataSource = ThietBiBUS.GetThietBiTheoLoai(cbbLoai.SelectedValue as String);
+                dgvSanPham.Columns[0].Visible = false;
+                dgvSanPham.Columns[1].HeaderText = "Tên thiết bị";
+                dgvSanPham.Columns[2].HeaderText = "Số Lượng";
+                dgvSanPham.Columns[3].HeaderText = "Giá";
+                dgvSanPham.Columns[4].HeaderText = "Loại";
+            }
         }
     }
 }

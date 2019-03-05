@@ -15,6 +15,10 @@
         {
             return ThietBiDAO.GetThietBi(id);
         }
+        public static List<ThietBi> GetThietBiTheoLoai(String loai)
+        {
+            return ThietBiDAO.GetThietBiTheoLoai(loai);
+        }
         public static String[] Loaitb()
         {
             return ThietBiDAO.LoaiTB();

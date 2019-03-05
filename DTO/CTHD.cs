@@ -24,7 +24,7 @@
         {
             this.mahd = data[0];
             this.soluong = int.Parse(data[1]);
-            this.matb = new ThietBi(new string[] { data[2], data[3], data[6], data[5], data[4] });
+            this.matb = new ThietBi(new string[] { data[2], data[3], data[4], data[5], data[6] });
         }
     }
 }
