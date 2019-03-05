@@ -30,6 +30,7 @@ namespace GUI
         {
             this.thietBi = thietBi;
             InitPCTHD();
+            lblThietBi.Text = thietBi.Tentb;
             lblGia.Text = thietBi.Dongia.ToString("#,0");
         }
         private void InitPCTHD()
