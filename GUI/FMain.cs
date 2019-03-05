@@ -11,7 +11,7 @@
         private const int tabKH = 0;
         private const int tabTB = 1;
         private const int tabHD = 2;
-        private DataGridViewCell beedit;
+        private object beedit;
         public FMain()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@
         private void LoadKhachHang()
         {
             List<KhachHang> list = KhachHangBUS.ListKH();
-            if(list.Count > 0)
+            if (list.Count > 0)
             {
                 dgvKhachHang.DataSource = list;
                 dgvKhachHang.Columns[0].Visible = false;
@@ -32,12 +32,12 @@
             {
                 dgvKhachHang.DataSource = null;
             }
-            
+
         }
         private void LoadThietBi()
         {
             List<ThietBi> list = ThietBiBUS.ListTB();
-            if(list.Count > 0)
+            if (list.Count > 0)
             {
                 dgvSanPham.DataSource = list;
                 dgvSanPham.Columns[0].Visible = false;
@@ -127,11 +127,10 @@
                 dgvCTHD.Columns[2].HeaderText = "Số lượng";
             }
         }
-
         private void dgvKhachHang_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             DialogResult re = MessageBox.Show("Bạn có muốn lưu không?", "Thông báo", MessageBoxButtons.YesNo);
-            if(re == DialogResult.Yes)
+            if (re == DialogResult.Yes)
             {
                 KhachHang kh = (dgvKhachHang.DataSource as List<KhachHang>)[e.RowIndex];
                 if (KhachHangBUS.EditKhachHang(kh) == 0)
@@ -142,14 +141,42 @@
             }
             else
             {
-                dgvKhachHang[e.ColumnIndex, e.RowIndex] = beedit;
+                dgvKhachHang[e.ColumnIndex, e.RowIndex].Value = beedit;
             }
-
         }
+
 
         private void dgvKhachHang_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            beedit = dgvKhachHang[e.ColumnIndex, e.RowIndex];
+            beedit = dgvKhachHang[e.ColumnIndex, e.RowIndex].Value;
+        }
+
+        private void dgvSanPham_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            beedit = dgvSanPham[e.ColumnIndex, e.RowIndex].Value;
+        }
+
+        private void dgvSanPham_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult re = MessageBox.Show("Bạn có muốn lưu không?", "Thông báo", MessageBoxButtons.YesNo);
+            if (re == DialogResult.Yes)
+            {
+                ThietBi tb = (dgvSanPham.DataSource as List<ThietBi>)[e.RowIndex];
+                if (ThietBiBUS.EditThietBi(tb) == 0)
+                {
+                    MessageBox.Show("Kiểm tra lại kết nối của bạn.", "Thông báo");
+                    LoadThietBi();
+                }
+            }
+            else
+            {
+                dgvSanPham[e.ColumnIndex, e.RowIndex].Value = beedit;
+            }
+        }
+
+        private void dgvSanPham_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show("Vui lòng nhập kiểu dữ liệu số.","Thông báo");
         }
     }
 }
