@@ -46,9 +46,8 @@
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             String sql = "UPDATE ThietBi \n" +
-                "SET ten='" +tb.Tentb+"',gia="+tb.Dongia+",soluong="+tb.SL+",loai='"+tb.Loaitb+"'\n"+
+                "SET ten=N'" +tb.Tentb+"',gia="+tb.Dongia+",soluong="+tb.SL+",loai=N'"+tb.Loaitb+"'\n"+
                 "WHERE id='" + tb.Matb+"'";
-            Console.WriteLine(sql);
             try
             {
                 SqlCommand cmd = conn.CreateCommand();

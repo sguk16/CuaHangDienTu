@@ -53,7 +53,6 @@
             conn.Open();
             List<String[]> result = new List<String[]>();
             String sql = $"select CTHoaDon.id,CTHoaDon.soluong,ThietBi.id,ThietBi.ten,ThietBi.gia,ThietBi.soluong,ThietBi.loai from CTHoaDon, ThietBi where CTHoaDon.idthietbi = ThietBi.id AND CTHoaDon.id='{id}'";
-            Console.WriteLine(sql);
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
@@ -155,7 +154,6 @@
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             String sql = "INSERT INTO " + table + " VALUES(" + obj + ")";
-            Console.WriteLine(sql);
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
@@ -234,7 +232,6 @@
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             String sql = $"UPDATE ThietBi SET soluong = soluong - {soluong} WHERE id = '{id}'";
-            Console.WriteLine(sql);
             try
             {
                 SqlCommand cmd = conn.CreateCommand();

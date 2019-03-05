@@ -30,9 +30,8 @@
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             String sql = "UPDATE KhachHang \n" +
-                "SET ten='" + kh.Tenkh + "',diachi=N'" + kh.Diachi + "',sdt='" + kh.Sdt + "'\n" +
+                "SET ten=N'" + kh.Tenkh + "',diachi=N'" + kh.Diachi + "',sdt='" + kh.Sdt + "'\n" +
                 "WHERE id='" + kh.Makh + "'";
-            Console.WriteLine(sql);
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
