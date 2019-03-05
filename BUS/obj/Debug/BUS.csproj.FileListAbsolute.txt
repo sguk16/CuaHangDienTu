@@ -31,3 +31,14 @@ C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\BUS\bin\Debug\DTO.dll
 C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\BUS\bin\Debug\DAO.pdb
 C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\BUS\bin\Debug\DTO.pdb
 C:\Users\Truong Vi Huy\Source\Repos\ThietBi1\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\bin\Debug\BUS.dll
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\bin\Debug\BUS.pdb
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\bin\Debug\DAO.dll
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\bin\Debug\DTO.dll
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\bin\Debug\DAO.pdb
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\bin\Debug\DTO.pdb
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\obj\Debug\BUS.dll
+C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\BUS\obj\Debug\BUS.pdb
