@@ -19,7 +19,7 @@
         public static List<ChiTietHoaDon> GetCTHD(String id)
         {
             List<ChiTietHoaDon> result = new List<ChiTietHoaDon>();
-            List<String[]> data = ExecuteQuery.getAll("CTHoaDon WHERE id=\'" + id + "\'");
+            List<String[]> data = ExecuteQuery.getAll("CTHoaDon");
             for (int i = 0; i < data.Count(); i++)
                 result.Add(new ChiTietHoaDon(data[i]));
             return result;

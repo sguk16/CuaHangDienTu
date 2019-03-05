@@ -166,5 +166,31 @@
                 conn.Dispose();
             }
         }
+        public static string getMahd()
+        {
+            String result="HD0000000001";
+            SqlConnection conn = GetConnect.GetDBConnection();
+            conn.Open();
+            String sql = "SELECT MAX(id) FROM HoaDon";
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                result = reader[0].ToString();
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e);
+                Console.WriteLine(e.StackTrace);
+                return result;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

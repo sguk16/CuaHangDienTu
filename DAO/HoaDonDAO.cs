@@ -25,8 +25,14 @@
             int i = 0;
             Console.Out.Write(hd.ToSQLString());
             if (ExecuteQuery.AddRows(hd.ToSQLString(), "HoaDon") > 0)
+            {
+                String id = ExecuteQuery.getMahd();
                 foreach (ChiTietHoaDon x in cthd)
+                {
+                    x.Mahd = id;
                     i += CTHDDAO.AddCTHD(x);
+                }
+            }
             return i;
 
         }
