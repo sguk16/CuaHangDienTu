@@ -23,6 +23,7 @@
         public static int AddHoaDon(HoaDon hd, List<ChiTietHoaDon> cthd)
         {
             int i = 0;
+            Console.Out.Write(hd.ToSQLString());
             if (ExecuteQuery.AddRows(hd.ToSQLString(), "HoaDon") > 0)
                 foreach (ChiTietHoaDon x in cthd)
                     i += CTHDDAO.AddCTHD(x);
