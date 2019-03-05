@@ -192,5 +192,33 @@
                 conn.Close();
             }
         }
+
+        public static int RefeshSL(String id, int soluong)
+        {
+            int result = 0;
+            SqlConnection conn = GetConnect.GetDBConnection();
+            conn.Open();
+            String sql = $"UPDATE ThietBi SET soluong = soluong - {soluong} WHERE id = '{id}'";
+            Console.WriteLine(sql);
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                result = cmd.ExecuteNonQuery();
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e);
+                Console.WriteLine(e.StackTrace);
+                return result;
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+
+        }
     }
 }

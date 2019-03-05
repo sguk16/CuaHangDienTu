@@ -30,8 +30,10 @@
                 foreach (ChiTietHoaDon x in cthd)
                 {
                     x.Mahd = id;
-                    i += CTHDDAO.AddCTHD(x);
+                    if (CTHDDAO.AddCTHD(x) > 0 && ExecuteQuery.RefeshSL(x.Matb.Matb, x.Soluong) > 0)
+                        i++;
                 }
+
             }
             return i;
 
