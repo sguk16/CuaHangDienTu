@@ -13,10 +13,7 @@
             List<String[]> result = new List<String[]>();
             String sql = "";
             if (table == "HoaDon")
-                sql = @"SELECT HoaDon.id,ngay,tongtien,diachigiao,giaohang,idkhachhang,ten,diachi,sdt from HoaDon, KhachHang where HoaDon.idkhachhang=KhachHang.id
-";
-            else if (table == "CTHoaDon")
-                sql = @"select CTHoaDon.id,CTHoaDon.soluong,ThietBi.id,ThietBi.ten,ThietBi.gia,ThietBi.soluong,ThietBi.loai from CTHoaDon, ThietBi where CTHoaDon.idthietbi = ThietBi.id";
+                sql = @"SELECT HoaDon.id,ngay,tongtien,diachigiao,giaohang,idkhachhang,ten,diachi,sdt from HoaDon, KhachHang where HoaDon.idkhachhang=KhachHang.id";
             else
                 sql = "SELECT * FROM " + table;
             try
@@ -30,6 +27,44 @@
                     {
                         String[] tmp = new String[10];
                         for(int i=0;i<reader.FieldCount;i++)
+                        {
+                            tmp[i] = reader[i].ToString();
+                        }
+                        result.Add(tmp);
+                    }
+                };
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e);
+                Console.WriteLine(e.StackTrace);
+                return result;
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+        public static List<String[]> getCTHDbyID(String id)
+        {
+            SqlConnection conn = GetConnect.GetDBConnection();
+            conn.Open();
+            List<String[]> result = new List<String[]>();
+            String sql = $"select CTHoaDon.id,CTHoaDon.soluong,ThietBi.id,ThietBi.ten,ThietBi.gia,ThietBi.soluong,ThietBi.loai from CTHoaDon, ThietBi where CTHoaDon.idthietbi = ThietBi.id AND CTHoaDon.id='{id}'";
+            Console.WriteLine(sql);
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        String[] tmp = new String[10];
+                        for (int i = 0; i < reader.FieldCount; i++)
                         {
                             tmp[i] = reader[i].ToString();
                         }
