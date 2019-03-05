@@ -120,6 +120,7 @@
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             String sql = "INSERT INTO " + table + " VALUES(" + obj + ")";
+            Console.WriteLine(sql);
             try
             {
                 SqlCommand cmd = conn.CreateCommand();

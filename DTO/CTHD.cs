@@ -9,7 +9,7 @@
         private int soluong;
         public override string ToString()
         {
-            return "\'" + mahd + "\',\'" + matb + "\','" + soluong + "\'";
+            return $"'{mahd}','{matb.Matb}',{soluong}";
         }
         public string Mahd { get => mahd; set => mahd = value; }
         public ThietBi Matb { get => matb; set => matb = value; }
