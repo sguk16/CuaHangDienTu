@@ -12,7 +12,7 @@
         {
             DateTime time = DateTime.Now;
             String format = "yyyy-MM-dd HH:mm:ss";
-            return $"dbo.AUTO_IDHD(),'{makh.Makh}','{ngaylap.ToString(format)}',{thanhtien},{diachigiao},'{giaohang}'";
+            return $"dbo.AUTO_IDHD(),'{makh.Makh}','{ngaylap.ToString(format)}',{thanhtien},N'{diachigiao}',{giaohang}";
         }
         public string Mahd { get => mahd; set => mahd = value; }
         public KhachHang Makh { get => makh; set => makh = value; }
