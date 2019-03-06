@@ -11,6 +11,10 @@
         {
             return KhachHangDAO.GetAllKhachHang();
         }
+        public static List<KhachHang> GetNameKhachhang(string name)
+        {
+            return KhachHangDAO.GetNameKhachhang(name);
+        }
         public static KhachHang GetKhachHang(String id)
         {
             return new KhachHang(ExecuteQuery.getOne(id, "KhachHang"));

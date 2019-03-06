@@ -16,6 +16,14 @@
                 result.Add(new KhachHang(data[i]));
             return result;
         }
+        public static List<KhachHang> GetNameKhachhang(string name)
+        {
+            List<KhachHang> result = new List<KhachHang>();
+            List<String[]> data = ExecuteQuery.getNameKH(name);
+            for (int i = 0; i < data.Count(); i++)
+                result.Add(new KhachHang(data[i]));
+            return result;
+        }
         public static KhachHang GetKhachHang(String id)
         {
             return new KhachHang(ExecuteQuery.getOne(id, "KhachHang"));

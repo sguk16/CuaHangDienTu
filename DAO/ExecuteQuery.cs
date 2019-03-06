@@ -47,6 +47,43 @@
                 conn.Dispose();
             }
         }
+        public static List<String[]> getNameKH(string name)
+        {
+            SqlConnection conn = GetConnect.GetDBConnection();
+            conn.Open();
+            List<String[]> result = new List<String[]>();
+            string sql = $"SELECT * FROM KhachHang WHERE ten like '%{name}%'";
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        String[] tmp = new String[10];
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            tmp[i] = reader[i].ToString();
+                        }
+                        result.Add(tmp);
+                    }
+                };
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e);
+                Console.WriteLine(e.StackTrace);
+                return result;
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
         public static List<String[]> getCTHDbyID(String id)
         {
             SqlConnection conn = GetConnect.GetDBConnection();
