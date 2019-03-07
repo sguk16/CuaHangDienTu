@@ -57,7 +57,7 @@
             if (list.Count > 0)
             {
                 dgvHoaDon.DataSource = list;
-                dgvHoaDon.Columns[0].Visible = false;
+                dgvHoaDon.Columns[0].HeaderText = "Mã hóa đơn";
                 dgvHoaDon.Columns[1].HeaderText = "Khách hàng";
                 dgvHoaDon.Columns[2].HeaderText = "Ngày lập";
                 dgvHoaDon.Columns[3].HeaderText = "Tổng tiền";
@@ -176,7 +176,7 @@
 
         private void dgvSanPham_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            MessageBox.Show("Vui lòng nhập kiểu dữ liệu số.","Thông báo");
+            MessageBox.Show("Vui lòng nhập kiểu dữ liệu số.", "Thông báo");
         }
 
         private void txbHD_KeyPress(object sender, KeyPressEventArgs e)
@@ -205,10 +205,12 @@
             else
             {
                 HoaDon hoaDon = HoaDonBUS.GetHoaDon(txbHD.Text);
-                if(hoaDon != null)
+                if (hoaDon != null)
                 {
-                    dgvHoaDon.DataSource = HoaDonBUS.GetHoaDon(txbHD.Text);
-                    dgvHoaDon.Columns[0].Visible = false;
+                    List<HoaDon> list = new List<HoaDon>();
+                    list.Add(hoaDon);
+                    dgvHoaDon.DataSource = list;
+                    dgvHoaDon.Columns[0].HeaderText = "Mã hóa đơn";
                     dgvHoaDon.Columns[1].HeaderText = "Khách hàng";
                     dgvHoaDon.Columns[2].HeaderText = "Ngày lập";
                     dgvHoaDon.Columns[3].HeaderText = "Tổng tiền";
@@ -219,6 +221,12 @@
                 else
                 {
                     dgvHoaDon.DataSource = null;
+                    lblKH.Text = String.Empty;
+                    lblMaHD.Text = String.Empty;
+                    lblNgay.Text = String.Empty;
+                    lblStt.Text = String.Empty;
+                    lblDiaChi.Text = String.Empty;
+                    lblTien.Text = String.Empty;
                 }
             }
         }
@@ -230,8 +238,8 @@
                 LoadHoaDon();
             else
             {
-                List<HoaDon> list = HoaDonBUS.ListHD();
-                if(list.Count > 0)
+                List<HoaDon> list = HoaDonBUS.HDtenKH(txbKH.Text);
+                if (list.Count > 0)
                 {
                     dgvHoaDon.DataSource = list;
                     dgvHoaDon.Columns[0].Visible = false;
@@ -245,8 +253,20 @@
                 else
                 {
                     dgvHoaDon.DataSource = null;
+                    lblKH.Text = String.Empty;
+                    lblMaHD.Text = String.Empty;
+                    lblNgay.Text = String.Empty;
+                    lblStt.Text = String.Empty;
+                    lblDiaChi.Text = String.Empty;
+                    lblTien.Text = String.Empty;
                 }
             }
+        }
+
+        private void btnGiao_Click(object sender, EventArgs e)
+        {
+            HoaDon hoaDon = (dgvHoaDon.DataSource as List<HoaDon>)[dgvHoaDon.CurrentRow.Index];
+
         }
     }
 }

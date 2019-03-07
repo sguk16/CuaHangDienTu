@@ -50,6 +50,7 @@
             label1 = new System.Windows.Forms.Label();
             dgvSanPham = new System.Windows.Forms.DataGridView();
             cbbLoai = new System.Windows.Forms.ComboBox();
+            label8 = new System.Windows.Forms.Label();
             pnlHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(nudSale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(dgvSanPham)).BeginInit();
@@ -155,7 +156,6 @@
             // 
             cbbKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             cbbKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            cbbKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             cbbKH.FormattingEnabled = true;
             cbbKH.Location = new System.Drawing.Point(96, 38);
             cbbKH.Name = "cbbKH";
@@ -312,18 +312,29 @@
             // cbbLoai
             // 
             cbbLoai.FormattingEnabled = true;
-            cbbLoai.Location = new System.Drawing.Point(12, 12);
-            cbbLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            cbbLoai.Location = new System.Drawing.Point(104, 13);
+            cbbLoai.Margin = new System.Windows.Forms.Padding(2);
             cbbLoai.Name = "cbbLoai";
             cbbLoai.Size = new System.Drawing.Size(204, 21);
             cbbLoai.TabIndex = 3;
             cbbLoai.SelectedValueChanged += new System.EventHandler(cbbLoai_SelectedValueChanged);
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label8.Location = new System.Drawing.Point(12, 14);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(87, 15);
+            label8.TabIndex = 24;
+            label8.Text = "Loại thiết bị:";
             // 
             // FHoaDon
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 547);
+            Controls.Add(label8);
             Controls.Add(cbbLoai);
             Controls.Add(dgvSanPham);
             Controls.Add(pnlHoaDon);
@@ -338,6 +349,7 @@
             ((System.ComponentModel.ISupportInitialize)(nudSale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(dgvSanPham)).EndInit();
             ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -364,6 +376,7 @@
         private System.Windows.Forms.TextBox txbDiaChi;
         private System.Windows.Forms.Button btnThemKH;
         private System.Windows.Forms.ComboBox cbbLoai;
+        private System.Windows.Forms.Label label8;
         private static System.Windows.Forms.Label lblSum;
     }
 }

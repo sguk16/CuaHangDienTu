@@ -42,6 +42,8 @@
             {
                 cbbKH.DataSource = list;
                 cbbKH.DisplayMember = "Tenkh";
+                cbbKH.SelectedIndex = -1;
+                txbDiaChi.Text = String.Empty;
             }
         }
         private void LoadLoai()

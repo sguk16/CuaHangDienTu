@@ -36,6 +36,7 @@
             this.btnSanPham = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnGiao = new System.Windows.Forms.Button();
             this.btnTimKH = new System.Windows.Forms.Button();
             this.btnTimMaHD = new System.Windows.Forms.Button();
             this.txbKH = new System.Windows.Forms.TextBox();
@@ -166,6 +167,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnGiao);
             this.tabPage3.Controls.Add(this.btnTimKH);
             this.tabPage3.Controls.Add(this.btnTimMaHD);
             this.tabPage3.Controls.Add(this.txbKH);
@@ -193,6 +195,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hóa đơn";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnGiao
+            // 
+            this.btnGiao.Location = new System.Drawing.Point(709, 101);
+            this.btnGiao.Name = "btnGiao";
+            this.btnGiao.Size = new System.Drawing.Size(75, 32);
+            this.btnGiao.TabIndex = 23;
+            this.btnGiao.Text = "Giao";
+            this.btnGiao.UseVisualStyleBackColor = true;
+            this.btnGiao.Click += new System.EventHandler(this.btnGiao_Click);
             // 
             // btnTimKH
             // 
@@ -270,9 +282,9 @@
             // 
             // lblTien
             // 
-            this.lblTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTien.AutoSize = true;
-            this.lblTien.Location = new System.Drawing.Point(764, 379);
+            this.lblTien.Location = new System.Drawing.Point(734, 379);
             this.lblTien.Name = "lblTien";
             this.lblTien.Size = new System.Drawing.Size(20, 24);
             this.lblTien.TabIndex = 14;
@@ -387,11 +399,11 @@
             // btnHoaDon
             // 
             this.btnHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHoaDon.Location = new System.Drawing.Point(317, 379);
+            this.btnHoaDon.Location = new System.Drawing.Point(262, 379);
             this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Size = new System.Drawing.Size(75, 31);
+            this.btnHoaDon.Size = new System.Drawing.Size(130, 31);
             this.btnHoaDon.TabIndex = 3;
-            this.btnHoaDon.Text = "Thêm";
+            this.btnHoaDon.Text = "Lập hóa đơn";
             this.btnHoaDon.UseVisualStyleBackColor = true;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
@@ -465,5 +477,6 @@
         private System.Windows.Forms.TextBox txbHD;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnGiao;
     }
 }
