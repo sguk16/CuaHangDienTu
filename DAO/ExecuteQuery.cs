@@ -126,7 +126,7 @@
             String[] result = { };
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
-            String sql = "SELECT * FROM " + table + "WHERE id =\'" + id +"\'";
+            String sql = "SELECT * FROM " + table + " WHERE id =\'" + id +"\'";
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
