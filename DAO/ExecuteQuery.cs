@@ -163,7 +163,7 @@
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             List<String[]> result = new List<String[]>();
-            String sql = $"select HD.* from HoaDon HD,KhachHang KH where KH.ten like N'%{ten}%' AND idkhachhang = KH.id";
+            String sql = $"SELECT HD.id,ngay,tongtien,diachigiao,giaohang,idkhachhang,ten,diachi,sdt from HoaDon HD, KhachHang KH where HD.idkhachhang = KH.id and KH.ten like N'%{ten}%'";
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
