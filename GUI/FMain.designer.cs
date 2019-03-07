@@ -36,6 +36,12 @@
             this.btnSanPham = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnTimKH = new System.Windows.Forms.Button();
+            this.btnTimMaHD = new System.Windows.Forms.Button();
+            this.txbKH = new System.Windows.Forms.TextBox();
+            this.txbHD = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblKH = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblTien = new System.Windows.Forms.Label();
@@ -160,6 +166,12 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnTimKH);
+            this.tabPage3.Controls.Add(this.btnTimMaHD);
+            this.tabPage3.Controls.Add(this.txbKH);
+            this.tabPage3.Controls.Add(this.txbHD);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.lblKH);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.lblTien);
@@ -181,6 +193,60 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hóa đơn";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnTimKH
+            // 
+            this.btnTimKH.Location = new System.Drawing.Point(303, 37);
+            this.btnTimKH.Name = "btnTimKH";
+            this.btnTimKH.Size = new System.Drawing.Size(75, 29);
+            this.btnTimKH.TabIndex = 22;
+            this.btnTimKH.Text = "Tìm";
+            this.btnTimKH.UseVisualStyleBackColor = true;
+            this.btnTimKH.Click += new System.EventHandler(this.btnTimKH_Click);
+            // 
+            // btnTimMaHD
+            // 
+            this.btnTimMaHD.Location = new System.Drawing.Point(303, 0);
+            this.btnTimMaHD.Name = "btnTimMaHD";
+            this.btnTimMaHD.Size = new System.Drawing.Size(75, 31);
+            this.btnTimMaHD.TabIndex = 21;
+            this.btnTimMaHD.Text = "Tìm";
+            this.btnTimMaHD.UseVisualStyleBackColor = true;
+            this.btnTimMaHD.Click += new System.EventHandler(this.btnTimMaHD_Click);
+            // 
+            // txbKH
+            // 
+            this.txbKH.Location = new System.Drawing.Point(157, 37);
+            this.txbKH.Name = "txbKH";
+            this.txbKH.Size = new System.Drawing.Size(140, 29);
+            this.txbKH.TabIndex = 20;
+            this.txbKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKH_KeyPress);
+            // 
+            // txbHD
+            // 
+            this.txbHD.Location = new System.Drawing.Point(157, 2);
+            this.txbHD.Name = "txbHD";
+            this.txbHD.Size = new System.Drawing.Size(140, 29);
+            this.txbHD.TabIndex = 19;
+            this.txbHD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbHD_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 24);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Khách hàng:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 24);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Mã hóa đơn:";
             // 
             // lblKH
             // 
@@ -338,12 +404,12 @@
             this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoaDon.Location = new System.Drawing.Point(3, 5);
+            this.dgvHoaDon.Location = new System.Drawing.Point(3, 72);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(389, 365);
+            this.dgvHoaDon.Size = new System.Drawing.Size(389, 298);
             this.dgvHoaDon.TabIndex = 2;
             this.dgvHoaDon.SelectionChanged += new System.EventHandler(this.dgvHoaDon_SelectionChanged);
             // 
@@ -393,5 +459,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblKH;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnTimKH;
+        private System.Windows.Forms.Button btnTimMaHD;
+        private System.Windows.Forms.TextBox txbKH;
+        private System.Windows.Forms.TextBox txbHD;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

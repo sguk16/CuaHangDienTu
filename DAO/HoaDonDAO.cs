@@ -18,7 +18,10 @@
         }
         public static HoaDon GetHoaDon(String id)
         {
-            return new HoaDon(ExecuteQuery.getOne(id, "HoaDon"));
+            String[] str = ExecuteQuery.getOne(id, "HoaDon");
+            if(str.Length > 0)
+                return new HoaDon(str);
+            else return null;
         }
         public static int AddHoaDon(HoaDon hd, List<ChiTietHoaDon> cthd)
         {

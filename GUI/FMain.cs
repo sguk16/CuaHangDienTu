@@ -178,5 +178,75 @@
         {
             MessageBox.Show("Vui lòng nhập kiểu dữ liệu số.","Thông báo");
         }
+
+        private void txbHD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)8)
+                e.Handled = false;
+            else e.Handled = true;
+            if (e.KeyChar == (char)13)
+                btnTimMaHD.PerformClick();
+        }
+
+        private void txbKH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)8 || Char.IsWhiteSpace(e.KeyChar))
+                e.Handled = false;
+            else e.Handled = true;
+            if (e.KeyChar == (char)13)
+                btnTimKH.PerformClick();
+        }
+
+        private void btnTimMaHD_Click(object sender, EventArgs e)
+        {
+            txbKH.Text = String.Empty;
+            if (txbHD.Text == String.Empty)
+                LoadHoaDon();
+            else
+            {
+                HoaDon hoaDon = HoaDonBUS.GetHoaDon(txbHD.Text);
+                if(hoaDon != null)
+                {
+                    dgvHoaDon.DataSource = HoaDonBUS.GetHoaDon(txbHD.Text);
+                    dgvHoaDon.Columns[0].Visible = false;
+                    dgvHoaDon.Columns[1].HeaderText = "Khách hàng";
+                    dgvHoaDon.Columns[2].HeaderText = "Ngày lập";
+                    dgvHoaDon.Columns[3].HeaderText = "Tổng tiền";
+                    dgvHoaDon.Columns[4].HeaderText = "Địa chỉ giao";
+                    dgvHoaDon.Columns[5].Visible = false;
+                    dgvHoaDon.Columns[6].HeaderText = "Trạng thái";
+                }
+                else
+                {
+                    dgvHoaDon.DataSource = null;
+                }
+            }
+        }
+
+        private void btnTimKH_Click(object sender, EventArgs e)
+        {
+            txbHD.Text = String.Empty;
+            if (txbKH.Text == String.Empty)
+                LoadHoaDon();
+            else
+            {
+                List<HoaDon> list = HoaDonBUS.ListHD();
+                if(list.Count > 0)
+                {
+                    dgvHoaDon.DataSource = list;
+                    dgvHoaDon.Columns[0].Visible = false;
+                    dgvHoaDon.Columns[1].HeaderText = "Khách hàng";
+                    dgvHoaDon.Columns[2].HeaderText = "Ngày lập";
+                    dgvHoaDon.Columns[3].HeaderText = "Tổng tiền";
+                    dgvHoaDon.Columns[4].HeaderText = "Địa chỉ giao";
+                    dgvHoaDon.Columns[5].Visible = false;
+                    dgvHoaDon.Columns[6].HeaderText = "Trạng thái";
+                }
+                else
+                {
+                    dgvHoaDon.DataSource = null;
+                }
+            }
+        }
     }
 }

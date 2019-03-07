@@ -21,3 +21,9 @@ C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\DTO\obj\Debug\DTO.cspro
 C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\DTO\obj\Debug\DTO.dll
 C:\Users\nhan9\source\repos\CuaHangDienTu1\CuaHangDienTu\DTO\obj\Debug\DTO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\BanHang\CuaHangDienTu\DTO\bin\Debug\DTO.dll
+C:\Users\Truong Vi Huy\Source\Repos\BanHang\CuaHangDienTu\DTO\bin\Debug\DTO.pdb
+C:\Users\Truong Vi Huy\Source\Repos\BanHang\CuaHangDienTu\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Truong Vi Huy\Source\Repos\BanHang\CuaHangDienTu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Truong Vi Huy\Source\Repos\BanHang\CuaHangDienTu\DTO\obj\Debug\DTO.dll
+C:\Users\Truong Vi Huy\Source\Repos\BanHang\CuaHangDienTu\DTO\obj\Debug\DTO.pdb
