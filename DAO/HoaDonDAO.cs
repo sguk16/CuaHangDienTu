@@ -19,7 +19,7 @@
         public static HoaDon GetHoaDon(String id)
         {
             String[] str = ExecuteQuery.getOne(id, "HoaDon");
-            if(str.Length > 0)
+            if(str.Count()> 0)
                 return new HoaDon(str);
             else return null;
         }

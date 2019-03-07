@@ -126,7 +126,11 @@
             String[] result = { };
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
-            String sql = "SELECT * FROM " + table + " WHERE id =\'" + id +"\'";
+            String sql;
+            if(table == "HoaDon")
+                sql= $"SELECT HD.id,ngay,tongtien,diachigiao,giaohang,idkhachhang,ten,diachi,sdt from HoaDon HD, KhachHang KH where HD.idkhachhang = KH.id and HD.id = '{id}'";
+            else sql = "SELECT * FROM " + table + " WHERE id =\'" + id +"\'";
+            Console.WriteLine(sql);
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
