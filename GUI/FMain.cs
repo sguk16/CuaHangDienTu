@@ -125,6 +125,12 @@
                 dgvCTHD.Columns[0].Visible = false;
                 dgvCTHD.Columns[1].HeaderText = "Thiết bị";
                 dgvCTHD.Columns[2].HeaderText = "Số lượng";
+                if(hoadon.Giaohang == 0)
+                    tabPage3.Controls.Add(this.btnGiao);
+                else
+                {
+                    tabPage3.Controls.Remove(this.btnGiao);
+                }
             }
         }
         private void dgvKhachHang_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -266,7 +272,30 @@
         private void btnGiao_Click(object sender, EventArgs e)
         {
             HoaDon hoaDon = (dgvHoaDon.DataSource as List<HoaDon>)[dgvHoaDon.CurrentRow.Index];
-
+            hoaDon.Giaohang = 1;
+            if (HoaDonBUS.EditHoaDon(hoaDon) == 0)
+            {
+                hoaDon.Giaohang = 0;
+                MessageBox.Show("Cập nhật không thành công.", "Thông báo");
+            }
+            else
+            {
+                dgvHoaDon.Refresh();
+                int index = dgvHoaDon.CurrentRow.Index;
+                HoaDon hoadon = (dgvHoaDon.DataSource as List<HoaDon>)[index];
+                lblMaHD.Text = hoadon.Mahd;
+                lblKH.Text = hoadon.Makh.ToString();
+                lblNgay.Text = hoadon.Ngaylap.ToShortDateString();
+                lblDiaChi.Text = hoadon.Diachigiao;
+                lblStt.Text = hoadon.TrangThai;
+                lblTien.Text = hoadon.Thanhtien.ToString("#,0");
+                if (hoadon.Giaohang == 0)
+                    tabPage3.Controls.Add(this.btnGiao);
+                else
+                {
+                    tabPage3.Controls.Remove(this.btnGiao);
+                }
+            }
         }
     }
 }

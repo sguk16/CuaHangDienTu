@@ -55,8 +55,8 @@
             SqlConnection conn = GetConnect.GetDBConnection();
             conn.Open();
             String format = "yyyy-MM-dd HH:mm:ss";
-            String sql = "UPDATE HoaDon \n" +
-                "SET idkhachhang='" + hd.Makh + "',ngay=" + hd.Ngaylap.ToString(format) + ",tongtien=" + hd.Thanhtien + ",diachigiao='" + hd.Diachigiao + "',giaohang=" + hd.Giaohang + "\n" +
+            String sql = "UPDATE HoaDon " +
+                "SET idkhachhang='" + hd.Makh.Makh + "',ngay='" + hd.Ngaylap.ToString(format) + "',tongtien=" + hd.Thanhtien + ",diachigiao=N'" + hd.Diachigiao + "',giaohang=" + hd.Giaohang + " " +
                 "WHERE id='" + hd.Mahd + "'";
             Console.WriteLine(sql);
             try

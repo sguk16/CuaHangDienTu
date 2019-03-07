@@ -198,6 +198,7 @@
             // 
             // btnGiao
             // 
+            this.btnGiao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGiao.Location = new System.Drawing.Point(709, 101);
             this.btnGiao.Name = "btnGiao";
             this.btnGiao.Size = new System.Drawing.Size(75, 32);
@@ -282,7 +283,7 @@
             // 
             // lblTien
             // 
-            this.lblTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTien.AutoSize = true;
             this.lblTien.Location = new System.Drawing.Point(734, 379);
             this.lblTien.Name = "lblTien";
