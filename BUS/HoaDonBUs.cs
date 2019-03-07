@@ -11,6 +11,10 @@
         {
             return HoaDonDAO.GetAllHoaDon();
         }
+        public static List<HoaDon> HDtenKH(String ten)
+        {
+            return HoaDonDAO.GetHDtenKH(ten);
+        }
         public static HoaDon GetHoaDon(String id)
         {
             return HoaDonDAO.GetHoaDon(id);

@@ -23,6 +23,14 @@
                 return new HoaDon(str);
             else return null;
         }
+        public static List<HoaDon> GetHDtenKH(String ten)
+        {
+            List<HoaDon> result = new List<HoaDon>();
+            List<String[]> data = ExecuteQuery.GetHDtenKH(ten);
+            for (int i = 0; i < data.Count(); i++)
+                result.Add(new HoaDon(data[i]));
+            return result;
+        }
         public static int AddHoaDon(HoaDon hd, List<ChiTietHoaDon> cthd)
         {
             int i = 0;
