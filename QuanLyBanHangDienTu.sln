@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{D916FA81-F7B3-4D94-A6EC-3CF32DB6B669}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForm", "WebForm\WebForm.csproj", "{489DEEB7-C453-411E-9EB7-8EC1DD812172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D916FA81-F7B3-4D94-A6EC-3CF32DB6B669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D916FA81-F7B3-4D94-A6EC-3CF32DB6B669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D916FA81-F7B3-4D94-A6EC-3CF32DB6B669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489DEEB7-C453-411E-9EB7-8EC1DD812172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489DEEB7-C453-411E-9EB7-8EC1DD812172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489DEEB7-C453-411E-9EB7-8EC1DD812172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489DEEB7-C453-411E-9EB7-8EC1DD812172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
