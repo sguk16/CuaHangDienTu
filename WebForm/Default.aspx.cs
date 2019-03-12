@@ -7,7 +7,8 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using BUS;
 using DTO;
-namespace WebForm
+
+namespace TestWeb
 {
     public partial class _Default : Page
     {
